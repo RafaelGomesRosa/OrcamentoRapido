@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento Avançado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Orçamento Avançado</h1>
+
+    <form id="advancedCalcForm">
+        <label for="area">Área total da edificação (m²):</label>
+        <input type="number" id="area" name="area" placeholder="Digite a área" required class="input-field">
+
+        <label for="piso">Tipo de piso:</label>
+        <select id="piso" name="piso" required class="input-field">
+            <option value="">Selecione</option>
+            <option value="ceramica">Cerâmico</option>
+            <option value="porcelanato">Porcelanato</option>
+        </select>
+
+        <label for="tinta">Tipo de tinta:</label>
+        <select id="tinta" name="tinta" required class="input-field">
+            <option value="">Selecione</option>
+            <option value="latex">Látex</option>
+            <option value="acrilica">Acrílica</option>
+        </select>
+
+        <label for="portas">Número de portas:</label>
+        <input type="number" id="portas" name="portas" min="0" placeholder="Digite o número de portas" required class="input-field">
+
+        <label for="janelas">Número de janelas:</label>
+        <input type="number" id="janelas" name="janelas" min="0" placeholder="Digite o número de janelas" required class="input-field">
+
+        <label for="forro">Tipo de forro:</label>
+        <select id="forro" name="forro" required class="input-field">
+            <option value="">Selecione</option>
+            <option value="gesso_rebaixado">Gesso Rebaixado</option>
+            <option value="gesso_simples">Gesso Simples</option>
+            <option value="pvc">PVC</option>
+        </select>
+
+        <!-- Botão de Personalizar Valores -->
+        <button type="button" class="customize-btn" onclick="openCustomizationCard()">Alterar Preços</button>
+
+        <!-- Botão Gerar Orçamento -->
+        <button type="button" onclick="generateReport()">Gerar Orçamento</button>
+    </form>
+
+    <!-- Card de Personalização -->
+    <div id="customizationCard" class="customization-card">
+        <h2>Personalizar Valores</h2>
+        <label for="customPiso">Preço do m² de Piso (R$):</label>
+        <input type="number" id="customPiso" placeholder="Exemplo: 50">
+
+        <label for="customTinta">Preço do m² de Tinta (R$):</label>
+        <input type="number" id="customTinta" placeholder="Exemplo: 20">
+
+        <label for="customPortas">Preço por Porta (R$):</label>
+        <input type="number" id="customPortas" placeholder="Exemplo: 200">
+
+        <label for="customJanelas">Preço por Janela (R$):</label>
+        <input type="number" id="customJanelas" placeholder="Exemplo: 300">
+
+        <label for="customForro">Preço do m² de Forro (R$):</label>
+        <input type="number" id="customForro" placeholder="Exemplo: 30">
+
+        <!-- Botão Salvar no Card -->
+        <button type="button" class="close-btn" onclick="saveCustomValues()">Salvar</button>
+    </div>
+</div>
+
+<!-- Modal do Relatório -->
+<div id="reportModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Relatório de Orçamento</h2>
+        <div id="reportContent"></div>
+    </div>
+</div>
+
+<script src="avancado.js"></script>
+</body>
+</html>
