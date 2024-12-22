@@ -1,0 +1,194 @@
+/* Estilo para o body */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência */
+    backdrop-filter: blur(5px);
+    background: url('https://s2-g1.glbimg.com/Jb883Q46WS_Enn6_yo0ELSCjUfI=/0x0:1024x574/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/X/k/S55MrTSTA5I1glx5LffQ/071ab7a27391401cbf654f47ff67c0b42d47cbd8.jpg') no-repeat center center fixed;
+    background-size: cover;
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* Estilo do container principal */
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    text-align: center; /* Ajuste para centralizar o texto no container */
+}
+
+/* Estilo do título */
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilo do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilo dos labels */
+label {
+    font-weight: bold;
+}
+
+/* Estilo para inputs */
+input[type="number"], select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Estilo para botões */
+button, .btn-primary {
+    padding: 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover, .btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active, .btn-primary:active {
+    background-color: #004495;
+    transform: scale(1);
+}
+
+/* Estilo específico para o botão "Orçamento Simplificado" */
+#orcamento-simplificado-btn {
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Estilo para as opções de rádio */
+.radio-option {
+    display: block;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.radio-option input {
+    margin-right: 10px;
+}
+
+.radio-option strong {
+    font-size: 16px;
+    color: #333;
+}
+
+.radio-option p {
+    margin: 5px 0 0 25px;
+    font-size: 14px;
+    color: #666;
+}
+
+.radio-option:hover {
+    background-color: #f1f1f1;
+    border-color: #bbb;
+}
+
+/* Estilo do modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para o gráfico de pizza */
+#chart-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilo para o botão de fechar */
+.close-btn {
+    position: absolute;
+    top: 0; /* Alinhando o botão ao topo do card */
+    right: 0; /* Alinhando o botão à direita do card */
+    background: none;
+    border: none;
+    font-size: 20px; /* Tamanho do 'X' */
+    color: #333; /* Cor do 'X' */
+    cursor: pointer;
+    width: 30px; /* Largura do botão */
+    height: 30px; /* Altura do botão */
+    text-align: center; /* Centraliza o 'X' horizontalmente */
+    line-height: 30px; /* Garante que o 'X' fique centralizado verticalmente */
+    border-radius: 4px; /* Bordas arredondadas */
+    display: flex; /* Usando flexbox para centralizar */
+    justify-content: center; /* Alinhando horizontalmente */
+    align-items: center; /* Alinhando verticalmente */
+    transition: background-color 0.3s;
+}
+
+/* Efeito de hover para o botão */
+.close-btn:hover {
+    background-color: #f1f1f1;
+}
+
