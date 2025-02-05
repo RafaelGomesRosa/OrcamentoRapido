@@ -10,7 +10,7 @@ body {
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência */
     backdrop-filter: blur(5px);
-    background: url('https://s2-g1.glbimg.com/Jb883Q46WS_Enn6_yo0ELSCjUfI=/0x0:1024x574/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/X/k/S55MrTSTA5I1glx5LffQ/071ab7a27391401cbf654f47ff67c0b42d47cbd8.jpg') no-repeat center center fixed;
+    background: url('https://th.bing.com/th/id/OIP.76RQw5dn3ljPPqLzU9PpvAHaE8?rs=1&pid=ImgDetMain') no-repeat center center fixed;
     background-size: cover;
     -webkit-backdrop-filter: blur(5px);
 }
